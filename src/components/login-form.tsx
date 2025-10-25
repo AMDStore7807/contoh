@@ -38,6 +38,8 @@ export function LoginForm({
         password: password,
       });
 
+      console.log("response", response);
+
       // Ambil token dari respons
       const token = response.data.token;
 

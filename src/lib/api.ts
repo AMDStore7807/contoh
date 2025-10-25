@@ -7,13 +7,13 @@ const api = axios.create({
 });
 
 // 2. Interceptor: Otomatis tambahkan token ke setiap request
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// api.interceptors.request.use((config) => {
+//   const token = localStorage.getItem("token");
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
 
 // 3. Fungsi queryDevices: Query langsung ke NBI seperti TODO.md
 export interface QueryDevicesParams {

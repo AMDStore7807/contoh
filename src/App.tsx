@@ -13,8 +13,6 @@ function App() {
     localStorage.setItem("token", newToken);
   };
 
-  const isAuthenticated = !!token;
-
   console.log("token", token);
   return (
     <div>
@@ -29,26 +27,17 @@ function App() {
       <hr />
 
       <Routes>
-        {/* 2. INI KUNCINYA:
-          Saat user membuka path "/", ganti elemennya dengan <Navigate />
-          yang mengarahkan (to) ke "/login".
-        */}
-        <Route
-          path="/"
-          element={<Navigate to={isAuthenticated ? "/home" : "/login"} />}
-        />
+        {/* Redirect root to home */}
+        <Route path="/" element={<Navigate to="/home" />} />
 
-        {/* 3. Tentukan path untuk halaman login itu sendiri */}
+        {/* Login route */}
         <Route
           path="/login"
           element={<LoginPage onLoginSuccess={onLoginSuccess} />}
         />
 
-        {/* Protected home route */}
-        <Route
-          path="/home"
-          element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
-        />
+        {/* Home route - temporarily unprotected to test devices */}
+        <Route path="/home" element={<Home />} />
 
         {/* Opsional: Rute "catch-all" untuk halaman tidak ditemukan */}
         <Route path="*" element={<h2>404: Halaman Tidak Ditemukan</h2>} />
