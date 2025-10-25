@@ -10,6 +10,7 @@ import {
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "@/lib/api";
 
 interface LoginFormProps extends React.ComponentProps<"div"> {
@@ -24,6 +25,7 @@ export function LoginForm({
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,6 +43,7 @@ export function LoginForm({
 
       if (token) {
         onLoginSuccess(token); // Kirim token ke App.tsx
+        navigate("/home"); // Redirect to home after login
       } else {
         setError("Login gagal: Token tidak diterima.");
       }
@@ -95,6 +98,7 @@ export function LoginForm({
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Field>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
               <Field>
                 <Button type="submit">Login</Button>
               </Field>
