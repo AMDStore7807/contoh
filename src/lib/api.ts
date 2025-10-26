@@ -15,7 +15,6 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-
 // 3. Fungsi queryDevices: Query langsung ke NBI seperti TODO.md
 export interface QueryDevicesParams {
   query?: Record<string, unknown>;
@@ -31,7 +30,7 @@ export async function queryDevices(params: QueryDevicesParams = {}) {
   // Build query params
   const queryParams: Record<string, string> = {};
 
-  // query: JSON string, URL-encoded
+  // query: JSON string, URL-encoded (GenieACS NBI uses 'query' for devices)
   if (Object.keys(query).length > 0) {
     queryParams.query = encodeURIComponent(JSON.stringify(query));
   } else {

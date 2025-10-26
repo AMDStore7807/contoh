@@ -1,12 +1,22 @@
-# TODO: Fix server.js for Development and Add User CRUD
+# TODO: Add User Endpoint in Express
 
-- [x] Install bcrypt for password hashing
-- [x] Remove static file serving from server.js (since Vite handles frontend in dev mode)
-- [x] Add JWT authentication middleware for protected user endpoints
-- [x] Improve POST /api/login to use bcrypt for password verification
-- [x] Add POST /api/logout endpoint (client-side token removal)
-- [x] Add PUT /api/users/:username endpoint (update user, hash password if provided)
-- [x] Add GET /api/users endpoint (list all users, protected)
-- [x] Add DELETE /api/users/:username endpoint (delete user, protected)
-- [x] Ensure user endpoints are handled before proxy to NBI
-- [x] Test the server with user CRUD and proxy functionality
+## Tasks
+
+- [x] Add POST /api/users endpoint in server.js
+  - [x] Implement authentication middleware (authenticateToken)
+  - [x] Validate input: username and password required
+  - [x] Check if username already exists
+  - [x] Hash password using crypto (SHA-256 with salt) to match existing database format
+  - [x] Save new user to MongoDB 'users' collection with \_id, password, salt, roles (matching existing schema)
+  - [x] Return success response
+- [x] Update login verification to use crypto instead of bcrypt
+- [x] Update password update in PUT endpoint to use crypto
+- [ ] Test the endpoint (optional: run server and make a test request)
+
+## Notes
+
+- Endpoint will be protected with JWT authentication
+- Password will be hashed using crypto.pbkdf2Sync with SHA-256 and salt to match existing user format
+- Ensure MongoDB connection is available
+- New users get default role "user"
+- Schema matches existing database: \_id, roles, password, salt

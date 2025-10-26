@@ -5,7 +5,16 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 import { fileURLToPath } from "url";
 import jwt from "jsonwebtoken";
 import { MongoClient } from "mongodb";
-import bcrypt from "bcrypt";
+import crypto from "crypto";
+
+// Helper functions for password hashing
+function hashPassword(password, salt) {
+  return crypto.pbkdf2Sync(password, salt, 10000, 64, "sha256").toString("hex");
+}
+
+function generateSalt() {
+  return crypto.randomBytes(32).toString("hex");
+}
 
 // --- Setup Awal ---
 const app = express();
@@ -34,7 +43,7 @@ connectDB();
 app.use(express.json());
 
 // JWT secret key
-const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key-here";
+const JWT_SECRET = process.env.JWT_SECRET || "BEATCOM_BOSS";
 
 // Middleware to verify JWT token
 const authenticateToken = (req, res, next) => {
@@ -56,6 +65,7 @@ const authenticateToken = (req, res, next) => {
 
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
+  console.log("Login attempt:", username);
 
   if (!username || !password) {
     return res
@@ -68,15 +78,17 @@ app.post("/api/login", async (req, res) => {
     if (!db) return res.status(503).json({ message: "Database belum siap" });
 
     const usersCollection = db.collection("users");
-    const user = await usersCollection.findOne({ username });
+    const user = await usersCollection.findOne({ _id: username });
 
     if (!user) {
       console.log("Login failed: User not found:", username);
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
-    // Verify password with bcrypt
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    // Verify password with crypto (SHA-256 with salt)
+    const salt = user.salt;
+    const hash = hashPassword(password, salt);
+    const isPasswordValid = hash === user.password;
     if (!isPasswordValid) {
       console.log("Login failed: Wrong password for:", username);
       return res.status(401).json({ message: "Invalid username or password" });
@@ -101,6 +113,49 @@ app.post("/api/login", async (req, res) => {
 app.post("/api/logout", authenticateToken, (req, res) => {
   console.log("Logout successful:", req.user.username);
   res.json({ message: "Logged out successfully" });
+});
+
+// POST /api/users - Add new user (protected)
+app.post("/api/users", async (req, res) => {
+  const { username, password, roles } = req.body;
+
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ message: "Username and password are required" });
+  }
+
+  try {
+    if (!db) return res.status(503).json({ message: "Database belum siap" });
+
+    const usersCollection = db.collection("users");
+
+    // Check if user already exists
+    const existingUser = await usersCollection.findOne({ username });
+    if (existingUser) {
+      return res.status(409).json({ message: "Username already exists" });
+    }
+
+    // Hash the password with crypto (SHA-256 with salt)
+    const salt = generateSalt();
+    const hashedPassword = hashPassword(password, salt);
+
+    // Create new user
+    const newUser = {
+      _id: username,
+      password: hashedPassword,
+      salt,
+      roles: roles || "user", // Default role
+    };
+
+    await usersCollection.insertOne(newUser);
+
+    console.log("User created successfully:", username);
+    res.status(201).json({ message: "User created successfully" });
+  } catch (error) {
+    console.error("Create user error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
 });
 
 // GET /api/users - List all users (protected)
@@ -132,9 +187,10 @@ app.put("/api/users/:username", authenticateToken, async (req, res) => {
     const updateData = { ...otherFields };
 
     if (password) {
-      // Hash the new password
-      const saltRounds = 10;
-      updateData.password = await bcrypt.hash(password, saltRounds);
+      // Hash the new password with crypto (SHA-256 with salt)
+      const salt = generateSalt();
+      updateData.password = hashPassword(password, salt);
+      updateData.salt = salt;
     }
 
     const result = await usersCollection.updateOne(
@@ -174,13 +230,23 @@ app.delete("/api/users/:username", authenticateToken, async (req, res) => {
   }
 });
 
+// GET /api/welcome - Unprotected endpoint that logs request and returns welcome message
+app.get("/api/welcome", (req, res) => {
+  console.log(`Request: ${req.method} ${req.path}`);
+  res.json({ message: "Welcome to the API" });
+});
+
 // --- 3. Atur Proxy API ke NBI (7557) ---
 // Proxy semua request yang tidak ditangani oleh routes di atas ke NBI
+// Hapus prefix /api saat proxy ke NBI
 app.use(
-  "/",
+  "/api",
   createProxyMiddleware({
     target: "http://localhost:7557", // Target backend NBI
     changeOrigin: true,
+    pathRewrite: {
+      "^/api": "", // Hapus /api prefix
+    },
     onError: (err, req, res) => {
       console.error("Proxy error:", err);
       res.writeHead(503).end("NBI service (7557) sepertinya mati.");
