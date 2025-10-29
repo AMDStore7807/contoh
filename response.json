@@ -1,0 +1,3090 @@
+{
+  "_id": "2C3341-G663%2DXPON-GGCL25574599",
+  "InternetGatewayDevice": {
+    "DeviceInfo": {
+      "AccessType": {
+        "_object": false,
+        "_writable": false
+      },
+      "AdditionalHardwareVersion": {
+        "_object": false,
+        "_writable": false
+      },
+      "AdditionalSoftwareVersion": {
+        "_object": false,
+        "_writable": false
+      },
+      "Description": {
+        "_object": false,
+        "_writable": false
+      },
+      "DeviceType": {
+        "_object": false,
+        "_writable": false
+      },
+      "FirstUseDate": {
+        "_object": false,
+        "_writable": false
+      },
+      "HardwareVersion": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "V9.0",
+        "_writable": false
+      },
+      "Manufacturer": {
+        "_object": false,
+        "_writable": false
+      },
+      "ManufacturerOUI": {
+        "_object": false,
+        "_writable": false
+      },
+      "ModelName": {
+        "_object": false,
+        "_writable": false
+      },
+      "ModemFirmwareVersion": {
+        "_object": false,
+        "_writable": false
+      },
+      "ProductClass": {
+        "_object": false,
+        "_writable": false
+      },
+      "ProvisioningCode": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "TLCO.GRP2",
+        "_writable": true
+      },
+      "SerialNumber": {
+        "_object": false,
+        "_writable": false
+      },
+      "SoftwareVersion": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "V9.0.10P1T1",
+        "_writable": false
+      },
+      "SpecVersion": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "1.0",
+        "_writable": false
+      },
+      "UpTime": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.368Z",
+        "_type": "xsd:unsignedInt",
+        "_value": 808762,
+        "_writable": false
+      },
+      "X_CT-COM_ALGAbility": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Alarm": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Capability": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_Card": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_CardInterVersion": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_CardKey": {
+        "_object": false,
+        "_writable": true
+      },
+      "X_CT-COM_Cardmanage": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_DLNA": {
+        "_object": true,
+        "_writable": true
+      },
+      "X_CT-COM_DeviceType": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_IPForwardModeEnabled": {
+        "_object": false,
+        "_writable": true
+      },
+      "X_CT-COM_IPProtocolVersion": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_InformExtend": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_InterfaceVersion": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_MiddlewareMgt": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Monitor": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_MonitorCollector": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Ping": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_PortalManagement": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_ReConnect": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Restore": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_ServiceManage": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_Syslog": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_TeleComAccount": {
+        "_object": true,
+        "_writable": false
+      },
+      "X_CT-COM_UPLink": {
+        "_object": false,
+        "_writable": false
+      },
+      "X_CT-COM_UPNP": {
+        "_object": true,
+        "_writable": false
+      },
+      "_object": true,
+      "_timestamp": "2025-08-18T04:31:59.303Z",
+      "_writable": false
+    },
+    "DeviceSummary": {
+      "_object": false,
+      "_writable": false
+    },
+    "DownloadDiagnostics": {
+      "_object": true,
+      "_writable": false
+    },
+    "IPPingDiagnostics": {
+      "_object": true,
+      "_writable": false
+    },
+    "LANDevice": {
+      "1": {
+        "Hosts": {
+          "Host": {
+            "71": {
+              "Active": {
+                "_object": false,
+                "_writable": false
+              },
+              "AddressSource": {
+                "_object": false,
+                "_writable": false
+              },
+              "HostName": {
+                "_object": false,
+                "_timestamp": "2025-08-18T05:05:26.368Z",
+                "_type": "xsd:string",
+                "_value": "",
+                "_writable": false
+              },
+              "IPAddress": {
+                "_object": false,
+                "_timestamp": "2025-08-18T05:05:26.368Z",
+                "_type": "xsd:string",
+                "_value": "192.168.100.24",
+                "_writable": false
+              },
+              "InterfaceType": {
+                "_object": false,
+                "_timestamp": "2025-08-18T05:05:26.368Z",
+                "_type": "xsd:string",
+                "_value": "802.11",
+                "_writable": false
+              },
+              "LeaseTimeRemaining": {
+                "_object": false,
+                "_writable": false
+              },
+              "MACAddress": {
+                "_object": false,
+                "_timestamp": "2025-08-18T05:05:26.368Z",
+                "_type": "xsd:string",
+                "_value": "88:D5:0C:06:22:BA",
+                "_writable": false
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": false
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T05:05:26.360Z",
+            "_writable": false
+          },
+          "HostNumberOfEntries": {
+            "_object": false,
+            "_writable": false
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T04:31:59.303Z",
+          "_writable": false
+        },
+        "LANEthernetInterfaceConfig": {
+          "_object": true,
+          "_writable": false
+        },
+        "LANHostConfigManagement": {
+          "AllowedMACAddresses": {
+            "_object": false,
+            "_writable": true
+          },
+          "AssociatedConnection": {
+            "_object": false,
+            "_writable": true
+          },
+          "DHCPLeaseTime": {
+            "_object": false,
+            "_timestamp": "2025-08-18T04:31:59.323Z",
+            "_type": "xsd:int",
+            "_value": 86400,
+            "_writable": true
+          },
+          "DHCPRelay": {
+            "_object": false,
+            "_writable": false
+          },
+          "DHCPServerConfigurable": {
+            "_object": false,
+            "_writable": true
+          },
+          "DHCPServerEnable": {
+            "_object": false,
+            "_writable": true
+          },
+          "DNSServers": {
+            "_object": false,
+            "_writable": true
+          },
+          "DomainName": {
+            "_object": false,
+            "_writable": true
+          },
+          "IPInterface": {
+            "_object": true,
+            "_writable": false
+          },
+          "IPInterfaceNumberOfEntries": {
+            "_object": false,
+            "_writable": false
+          },
+          "IPRouters": {
+            "_object": false,
+            "_writable": true
+          },
+          "MaxAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "MinAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "PassthroughLease": {
+            "_object": false,
+            "_writable": true
+          },
+          "PassthroughMACAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "ReservedAddresses": {
+            "_object": false,
+            "_writable": true
+          },
+          "SubnetMask": {
+            "_object": false,
+            "_writable": true
+          },
+          "UseAllocatedWAN": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Camera-MaxAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Camera-MinAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Computer-MaxAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Computer-MinAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_OPTION125Enable": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_OPTION16Enable": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_OPTION17Enable": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_OPTION60Enable": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Phone-MaxAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_Phone-MinAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_STB-MaxAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "X_CT-COM_STB-MinAddress": {
+            "_object": false,
+            "_writable": true
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T04:31:59.303Z",
+          "_writable": false
+        },
+        "WLANConfiguration": {
+          "1": {
+            "AssociatedDevice": {
+              "_object": true,
+              "_timestamp": "2025-08-18T05:05:26.360Z",
+              "_writable": false
+            },
+            "AuthenticationServiceMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "AutoRateFallBackEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BSSID": {
+              "_object": false,
+              "_writable": false
+            },
+            "BandWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconAdvertisementEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconType": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "WPA/WPA2",
+              "_writable": true
+            },
+            "Channel": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": true
+            },
+            "ChannelsInUse": {
+              "_object": false,
+              "_writable": false
+            },
+            "DeviceOperationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "DistanceFromRoot": {
+              "_object": false,
+              "_writable": true
+            },
+            "Enable": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:boolean",
+              "_value": true,
+              "_writable": true
+            },
+            "ExternelChannel": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "InsecureOOBAccessEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "IsolationEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "KeyPassphrase": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "",
+              "_writable": true
+            },
+            "LocationDescription": {
+              "_object": false,
+              "_writable": true
+            },
+            "MACAddressControlEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxBitRate": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxUserNum": {
+              "_object": false,
+              "_writable": true
+            },
+            "OperationalDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "PeerBSSID": {
+              "_object": false,
+              "_writable": true
+            },
+            "PossibleChannels": {
+              "_object": false,
+              "_writable": false
+            },
+            "PossibleDataTransmitRates": {
+              "_object": false,
+              "_writable": false
+            },
+            "PreSharedKey": {
+              "1": {
+                "AssociatedDeviceMACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PreSharedKey": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": false
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": false
+            },
+            "RadioEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "RegulatoryDomain": {
+              "_object": false,
+              "_writable": true
+            },
+            "SSID": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "Dirgahayu ke 80",
+              "_writable": true
+            },
+            "Standard": {
+              "_object": false,
+              "_writable": true
+            },
+            "Status": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalAssociations": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalBytesReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalBytesSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalIntegrityFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPSKFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "WEPEncryptionLevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "WEPKey": {
+              "_object": true,
+              "_writable": false
+            },
+            "WEPKeyIndex": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_APModuleEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_ChannelWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_GuardInterval": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_Mode": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_PowerValue": {
+              "_object": false,
+              "_writable": false
+            },
+            "X_CT-COM_Powerlevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RFBand": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RetryTimeout": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_SSIDHide": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_VLAN": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_WPSKeyWord": {
+              "_object": false,
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T05:05:26.360Z",
+            "_writable": true
+          },
+          "2": {
+            "AssociatedDevice": {
+              "_object": true,
+              "_timestamp": "2025-08-18T05:05:26.360Z",
+              "_writable": false
+            },
+            "AuthenticationServiceMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "AutoRateFallBackEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BSSID": {
+              "_object": false,
+              "_writable": false
+            },
+            "BandWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconAdvertisementEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconType": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "None",
+              "_writable": true
+            },
+            "Channel": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": true
+            },
+            "ChannelsInUse": {
+              "_object": false,
+              "_writable": false
+            },
+            "DeviceOperationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "DistanceFromRoot": {
+              "_object": false,
+              "_writable": true
+            },
+            "Enable": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:boolean",
+              "_value": true,
+              "_writable": true
+            },
+            "ExternelChannel": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "InsecureOOBAccessEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "IsolationEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "KeyPassphrase": {
+              "_object": false,
+              "_writable": true
+            },
+            "LocationDescription": {
+              "_object": false,
+              "_writable": true
+            },
+            "MACAddressControlEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxBitRate": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxUserNum": {
+              "_object": false,
+              "_writable": true
+            },
+            "OperationalDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "PeerBSSID": {
+              "_object": false,
+              "_writable": true
+            },
+            "PossibleChannels": {
+              "_object": false,
+              "_writable": false
+            },
+            "PossibleDataTransmitRates": {
+              "_object": false,
+              "_writable": false
+            },
+            "PreSharedKey": {
+              "1": {
+                "AssociatedDeviceMACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PreSharedKey": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": false
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": false
+            },
+            "RadioEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "RegulatoryDomain": {
+              "_object": false,
+              "_writable": true
+            },
+            "SSID": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "Pasang Wifi Gratis",
+              "_writable": true
+            },
+            "Standard": {
+              "_object": false,
+              "_writable": true
+            },
+            "Status": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalAssociations": {
+              "_object": false,
+              "_timestamp": "2025-08-18T05:05:26.372Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": false
+            },
+            "TotalBytesReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalBytesSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalIntegrityFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPSKFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "WEPEncryptionLevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "WEPKey": {
+              "_object": true,
+              "_writable": false
+            },
+            "WEPKeyIndex": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_APModuleEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_ChannelWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_GuardInterval": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_Mode": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_PowerValue": {
+              "_object": false,
+              "_writable": false
+            },
+            "X_CT-COM_Powerlevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RFBand": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RetryTimeout": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_SSIDHide": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_VLAN": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_WPSKeyWord": {
+              "_object": false,
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T05:05:26.360Z",
+            "_writable": true
+          },
+          "3": {
+            "AssociatedDevice": {
+              "_object": true,
+              "_timestamp": "2025-08-18T05:05:26.360Z",
+              "_writable": false
+            },
+            "AuthenticationServiceMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "AutoRateFallBackEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BSSID": {
+              "_object": false,
+              "_writable": false
+            },
+            "BandWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconAdvertisementEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconType": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "None",
+              "_writable": true
+            },
+            "Channel": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": true
+            },
+            "ChannelsInUse": {
+              "_object": false,
+              "_writable": false
+            },
+            "DeviceOperationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "DistanceFromRoot": {
+              "_object": false,
+              "_writable": true
+            },
+            "Enable": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:boolean",
+              "_value": true,
+              "_writable": true
+            },
+            "ExternelChannel": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "InsecureOOBAccessEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "IsolationEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "KeyPassphrase": {
+              "_object": false,
+              "_writable": true
+            },
+            "LocationDescription": {
+              "_object": false,
+              "_writable": true
+            },
+            "MACAddressControlEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxBitRate": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxUserNum": {
+              "_object": false,
+              "_writable": true
+            },
+            "OperationalDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "PeerBSSID": {
+              "_object": false,
+              "_writable": true
+            },
+            "PossibleChannels": {
+              "_object": false,
+              "_writable": false
+            },
+            "PossibleDataTransmitRates": {
+              "_object": false,
+              "_writable": false
+            },
+            "PreSharedKey": {
+              "1": {
+                "AssociatedDeviceMACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PreSharedKey": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": false
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": false
+            },
+            "RadioEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "RegulatoryDomain": {
+              "_object": false,
+              "_writable": true
+            },
+            "SSID": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "ALIJAYA-NET",
+              "_writable": true
+            },
+            "Standard": {
+              "_object": false,
+              "_writable": true
+            },
+            "Status": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalAssociations": {
+              "_object": false,
+              "_timestamp": "2025-08-18T05:05:26.372Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 1,
+              "_writable": false
+            },
+            "TotalBytesReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalBytesSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalIntegrityFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPSKFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "WEPEncryptionLevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "WEPKey": {
+              "_object": true,
+              "_writable": false
+            },
+            "WEPKeyIndex": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_APModuleEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_ChannelWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_GuardInterval": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_Mode": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_PowerValue": {
+              "_object": false,
+              "_writable": false
+            },
+            "X_CT-COM_Powerlevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RFBand": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RetryTimeout": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_SSIDHide": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_VLAN": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_WPSKeyWord": {
+              "_object": false,
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T05:05:26.360Z",
+            "_writable": true
+          },
+          "4": {
+            "AssociatedDevice": {
+              "_object": true,
+              "_timestamp": "2025-08-18T05:05:26.360Z",
+              "_writable": false
+            },
+            "AuthenticationServiceMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "AutoRateFallBackEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BSSID": {
+              "_object": false,
+              "_writable": false
+            },
+            "BandWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "BasicEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconAdvertisementEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "BeaconType": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "None",
+              "_writable": true
+            },
+            "Channel": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": true
+            },
+            "ChannelsInUse": {
+              "_object": false,
+              "_writable": false
+            },
+            "DeviceOperationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "DistanceFromRoot": {
+              "_object": false,
+              "_writable": true
+            },
+            "Enable": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:boolean",
+              "_value": false,
+              "_writable": true
+            },
+            "ExternelChannel": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "IEEE11iEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "InsecureOOBAccessEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "IsolationEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "KeyPassphrase": {
+              "_object": false,
+              "_writable": true
+            },
+            "LocationDescription": {
+              "_object": false,
+              "_writable": true
+            },
+            "MACAddressControlEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxBitRate": {
+              "_object": false,
+              "_writable": true
+            },
+            "MaxUserNum": {
+              "_object": false,
+              "_writable": true
+            },
+            "OperationalDataTransmitRates": {
+              "_object": false,
+              "_writable": true
+            },
+            "PeerBSSID": {
+              "_object": false,
+              "_writable": true
+            },
+            "PossibleChannels": {
+              "_object": false,
+              "_writable": false
+            },
+            "PossibleDataTransmitRates": {
+              "_object": false,
+              "_writable": false
+            },
+            "PreSharedKey": {
+              "1": {
+                "AssociatedDeviceMACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PreSharedKey": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": false
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": false
+            },
+            "RadioEnabled": {
+              "_object": false,
+              "_writable": true
+            },
+            "RegulatoryDomain": {
+              "_object": false,
+              "_writable": true
+            },
+            "SSID": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.325Z",
+              "_type": "xsd:string",
+              "_value": "SSID4",
+              "_writable": true
+            },
+            "Standard": {
+              "_object": false,
+              "_writable": true
+            },
+            "Status": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalAssociations": {
+              "_object": false,
+              "_timestamp": "2025-08-18T05:05:26.372Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": false
+            },
+            "TotalBytesReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalBytesSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalIntegrityFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPSKFailures": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsReceived": {
+              "_object": false,
+              "_writable": false
+            },
+            "TotalPacketsSent": {
+              "_object": false,
+              "_writable": false
+            },
+            "WEPEncryptionLevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "WEPKey": {
+              "_object": true,
+              "_writable": false
+            },
+            "WEPKeyIndex": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAAuthenticationMode": {
+              "_object": false,
+              "_writable": true
+            },
+            "WPAEncryptionModes": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_APModuleEnable": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_ChannelWidth": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_GuardInterval": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_Mode": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_PowerValue": {
+              "_object": false,
+              "_writable": false
+            },
+            "X_CT-COM_Powerlevel": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RFBand": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_RetryTimeout": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_SSIDHide": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_VLAN": {
+              "_object": false,
+              "_writable": true
+            },
+            "X_CT-COM_WPSKeyWord": {
+              "_object": false,
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T05:05:26.360Z",
+            "_writable": true
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T05:05:26.360Z",
+          "_writable": true
+        },
+        "X_CT-COM_DHCPv6Server": {
+          "_object": true,
+          "_writable": true
+        },
+        "X_CT-COM_DataSpeedLimit": {
+          "_object": true,
+          "_writable": true
+        },
+        "X_CT-COM_IPv6Config": {
+          "_object": true,
+          "_writable": false
+        },
+        "X_CT-COM_LoopbackDetection": {
+          "_object": true,
+          "_writable": true
+        },
+        "X_CT-COM_RouterAdvertisement": {
+          "_object": true,
+          "_writable": true
+        },
+        "_object": true,
+        "_timestamp": "2025-08-18T04:31:59.303Z",
+        "_writable": false
+      },
+      "_object": true,
+      "_timestamp": "2025-08-18T05:05:26.360Z",
+      "_writable": false
+    },
+    "Layer2Bridging": {
+      "_object": true,
+      "_writable": false
+    },
+    "Layer3Forwarding": {
+      "_object": true,
+      "_writable": false
+    },
+    "ManagementServer": {
+      "ConnectionRequestPassword": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.381Z",
+        "_type": "xsd:string",
+        "_value": "acsadmin12345",
+        "_writable": true
+      },
+      "ConnectionRequestURL": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "http://192.168.3.12:58000",
+        "_writable": false
+      },
+      "ConnectionRequestUsername": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.364Z",
+        "_type": "xsd:string",
+        "_value": "acs",
+        "_writable": true
+      },
+      "KickURL": {
+        "_object": false,
+        "_writable": false
+      },
+      "ParameterKey": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "",
+        "_writable": false
+      },
+      "Password": {
+        "_object": false,
+        "_timestamp": "2025-08-18T04:31:59.344Z",
+        "_type": "xsd:string",
+        "_value": "acsadmin12345",
+        "_writable": true
+      },
+      "PeriodicInformEnable": {
+        "_object": false,
+        "_timestamp": "2025-08-18T04:31:59.309Z",
+        "_type": "xsd:boolean",
+        "_value": true,
+        "_writable": true
+      },
+      "PeriodicInformInterval": {
+        "_object": false,
+        "_timestamp": "2025-08-18T04:31:59.309Z",
+        "_type": "xsd:unsignedInt",
+        "_value": 200,
+        "_writable": true
+      },
+      "PeriodicInformTime": {
+        "_object": false,
+        "_writable": true
+      },
+      "URL": {
+        "_object": false,
+        "_writable": true
+      },
+      "UpgradesManaged": {
+        "_object": false,
+        "_writable": true
+      },
+      "Username": {
+        "_object": false,
+        "_timestamp": "2025-08-18T04:31:59.309Z",
+        "_type": "xsd:string",
+        "_value": "acs",
+        "_writable": true
+      },
+      "_object": true,
+      "_timestamp": "2025-08-18T04:31:59.303Z",
+      "_writable": false
+    },
+    "Services": {
+      "_object": true,
+      "_writable": false
+    },
+    "Time": {
+      "_object": true,
+      "_writable": false
+    },
+    "WANDevice": {
+      "1": {
+        "WANCommonInterfaceConfig": {
+          "Connection": {
+            "_object": true,
+            "_writable": false
+          },
+          "EnabledForInternet": {
+            "_object": false,
+            "_writable": true
+          },
+          "Layer1DownstreamMaxBitRate": {
+            "_object": false,
+            "_writable": false
+          },
+          "Layer1UpstreamMaxBitRate": {
+            "_object": false,
+            "_writable": false
+          },
+          "MaximumActiveConnections": {
+            "_object": false,
+            "_writable": false
+          },
+          "NumberOfActiveConnections": {
+            "_object": false,
+            "_writable": false
+          },
+          "PhysicalLinkStatus": {
+            "_object": false,
+            "_writable": false
+          },
+          "TotalBytesReceived": {
+            "_object": false,
+            "_writable": false
+          },
+          "TotalBytesSent": {
+            "_object": false,
+            "_writable": false
+          },
+          "TotalPacketsReceived": {
+            "_object": false,
+            "_writable": false
+          },
+          "TotalPacketsSent": {
+            "_object": false,
+            "_writable": false
+          },
+          "WANAccessType": {
+            "_object": false,
+            "_timestamp": "2025-08-18T04:31:59.319Z",
+            "_type": "xsd:string",
+            "_value": "EPON",
+            "_writable": false
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T04:31:59.303Z",
+          "_writable": false
+        },
+        "WANConnectionDevice": {
+          "1": {
+            "WANIPConnection": {
+              "1": {
+                "AddressingType": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "AutoDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "ConnectionTrigger": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionType": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "IP_Routed",
+                  "_writable": true
+                },
+                "DNSEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSOverrideAllowed": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DefaultGateway": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Enable": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": true,
+                  "_writable": true
+                },
+                "ExternalIPAddress": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T05:05:26.361Z",
+                  "_type": "xsd:string",
+                  "_value": "192.168.3.12",
+                  "_writable": true
+                },
+                "IdleDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "LastConnectionError": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "MACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "MACAddressOverride": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "MaxMTUSize": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "NATEnabled": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": false,
+                  "_writable": true
+                },
+                "Name": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "1_TR069_R_VID_1011",
+                  "_writable": true
+                },
+                "PortMapping": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "PortMappingNumberOfEntries": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PossibleConnectionTypes": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RSIPAvailable": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RouteProtocolRx": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ShapingBurstSize": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ShapingRate": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "SubnetMask": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Uptime": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "WarnDisconnectDelay": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Aftr": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_AftrMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_DDNSConfiguration": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DHCPOPTION125": {
+                  "1": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Sub-option-data": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Subopt-code": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "2": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Sub-option-data": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Subopt-code": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "3": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Sub-option-data": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Subopt-code": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "4": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Sub-option-data": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Subopt-code": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DHCPOPTION60": {
+                  "1": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "ValueMode": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "2": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "ValueMode": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "3": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "ValueMode": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "4": {
+                    "Enable": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Type": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "Value": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "ValueMode": {
+                      "_object": false,
+                      "_writable": true
+                    },
+                    "_object": true,
+                    "_timestamp": "2025-08-18T04:31:59.303Z",
+                    "_writable": true
+                  },
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DHCPv6OPTION16": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DHCPv6OPTION17": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DefaultIPv6Gateway": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Dslite_Enable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPForwardList": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPoEName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPoEPassword": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6ConnStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6DomainName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddressAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6IPAddressOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6Prefix": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6PrefixDelegationEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixPltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixVltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface-DHCPEnable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_MulticastVlan": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_ServiceList": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.343Z",
+                  "_type": "xsd:string",
+                  "_value": "TR069",
+                  "_writable": true
+                },
+                "X_CT-COM_UpstreamWAN": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "WANIPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 1,
+              "_writable": false
+            },
+            "WANPPPConnection": {
+              "_object": true,
+              "_timestamp": "2025-08-18T05:05:26.360Z",
+              "_writable": true
+            },
+            "WANPPPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": false
+            },
+            "X_CT-COM_WANEponLinkConfig": {
+              "802-1pMark": {
+                "_object": false,
+                "_writable": true
+              },
+              "Enable": {
+                "_object": false,
+                "_writable": true
+              },
+              "Mode": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 2,
+                "_writable": true
+              },
+              "VLANIDMark": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 1011,
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T04:31:59.303Z",
+            "_writable": true
+          },
+          "2": {
+            "WANIPConnection": {
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "WANIPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": false
+            },
+            "WANPPPConnection": {
+              "1": {
+                "AutoDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "ConnectionTrigger": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionType": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T05:05:26.374Z",
+                  "_type": "xsd:string",
+                  "_value": "IP_Routed",
+                  "_writable": true
+                },
+                "CurrentMRUSize": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "DNSEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSOverrideAllowed": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Enable": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": true,
+                  "_writable": true
+                },
+                "ExternalIPAddress": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T05:05:26.376Z",
+                  "_type": "xsd:string",
+                  "_value": "192.168.10.37",
+                  "_writable": false
+                },
+                "IdleDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "LastConnectionError": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "MACAddress": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "2C:33:41:57:45:99",
+                  "_writable": true
+                },
+                "MACAddressOverride": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "MaxMRUSize": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "NATEnabled": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": true,
+                  "_writable": true
+                },
+                "Name": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "2_INTERNET_R_VID_",
+                  "_writable": true
+                },
+                "PPPAuthenticationProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPCompressionProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPEncryptionProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPLCPEcho": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPLCPEchoRetry": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPoEACName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PPPoEServiceName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Password": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "",
+                  "_writable": true
+                },
+                "PortMapping": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "PortMappingNumberOfEntries": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PossibleConnectionTypes": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RSIPAvailable": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RemoteIPAddress": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RouteProtocolRx": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Stats": {
+                  "X_CT-COM_Reconnection": {
+                    "_object": false,
+                    "_writable": false
+                  },
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": false
+                },
+                "TransportType": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "Uptime": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T05:05:26.368Z",
+                  "_type": "xsd:unsignedInt",
+                  "_value": 515907,
+                  "_writable": false
+                },
+                "Username": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "santo",
+                  "_writable": true
+                },
+                "WarnDisconnectDelay": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Aftr": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_AftrMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_DDNSConfiguration": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DefaultIPv6Gateway": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Dslite_Enable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPForwardList": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6ConnStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6DomainName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddressAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6IPAddressOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6Prefix": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6PrefixDelegationEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixPltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixVltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface-DHCPEnable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_MAXUser": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_MulticastVlan": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_ProxyEnable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_ServiceList": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.343Z",
+                  "_type": "xsd:string",
+                  "_value": "INTERNET",
+                  "_writable": true
+                },
+                "X_CT-COM_UpstreamWAN": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "WANPPPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 1,
+              "_writable": false
+            },
+            "X_CT-COM_WANEponLinkConfig": {
+              "802-1pMark": {
+                "_object": false,
+                "_writable": true
+              },
+              "Enable": {
+                "_object": false,
+                "_writable": true
+              },
+              "Mode": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 0,
+                "_writable": true
+              },
+              "VLANIDMark": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 0,
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T04:31:59.303Z",
+            "_writable": true
+          },
+          "3": {
+            "WANIPConnection": {
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "WANIPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 0,
+              "_writable": false
+            },
+            "WANPPPConnection": {
+              "1": {
+                "AutoDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "ConnectionTrigger": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "ConnectionType": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "PPPoE_Bridged",
+                  "_writable": true
+                },
+                "CurrentMRUSize": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "DNSEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSOverrideAllowed": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Enable": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": true,
+                  "_writable": true
+                },
+                "ExternalIPAddress": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "IdleDisconnectTime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "LastConnectionError": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "MACAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "MACAddressOverride": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "MaxMRUSize": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "NATEnabled": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:boolean",
+                  "_value": false,
+                  "_writable": true
+                },
+                "Name": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "3_Other_B_VID_",
+                  "_writable": true
+                },
+                "PPPAuthenticationProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPCompressionProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPEncryptionProtocol": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPLCPEcho": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPLCPEchoRetry": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PPPoEACName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "PPPoEServiceName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Password": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "",
+                  "_writable": true
+                },
+                "PortMapping": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "PortMappingNumberOfEntries": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "PossibleConnectionTypes": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RSIPAvailable": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RemoteIPAddress": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "RouteProtocolRx": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "Stats": {
+                  "X_CT-COM_Reconnection": {
+                    "_object": false,
+                    "_writable": false
+                  },
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": false
+                },
+                "TransportType": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "Uptime": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T05:05:26.368Z",
+                  "_type": "xsd:unsignedInt",
+                  "_value": 0,
+                  "_writable": false
+                },
+                "Username": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.319Z",
+                  "_type": "xsd:string",
+                  "_value": "",
+                  "_writable": true
+                },
+                "WarnDisconnectDelay": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Aftr": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_AftrMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_DDNSConfiguration": {
+                  "_object": true,
+                  "_timestamp": "2025-08-18T04:31:59.303Z",
+                  "_writable": true
+                },
+                "X_CT-COM_DefaultIPv6Gateway": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_Dslite_Enable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPForwardList": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPMode": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6ConnStatus": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6DNSServers": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6DomainName": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddress": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6IPAddressAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6IPAddressOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6Prefix": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixAlias": {
+                  "_object": false,
+                  "_writable": false
+                },
+                "X_CT-COM_IPv6PrefixDelegationEnabled": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixOrigin": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixPltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_IPv6PrefixVltime": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_LanInterface-DHCPEnable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_MAXUser": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_MulticastVlan": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_ProxyEnable": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "X_CT-COM_ServiceList": {
+                  "_object": false,
+                  "_timestamp": "2025-08-18T04:31:59.343Z",
+                  "_type": "xsd:string",
+                  "_value": "OTHER",
+                  "_writable": true
+                },
+                "X_CT-COM_UpstreamWAN": {
+                  "_object": false,
+                  "_writable": true
+                },
+                "_object": true,
+                "_timestamp": "2025-08-18T04:31:59.303Z",
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "WANPPPConnectionNumberOfEntries": {
+              "_object": false,
+              "_timestamp": "2025-08-18T04:31:59.319Z",
+              "_type": "xsd:unsignedInt",
+              "_value": 1,
+              "_writable": false
+            },
+            "X_CT-COM_WANEponLinkConfig": {
+              "802-1pMark": {
+                "_object": false,
+                "_writable": true
+              },
+              "Enable": {
+                "_object": false,
+                "_writable": true
+              },
+              "Mode": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 0,
+                "_writable": true
+              },
+              "VLANIDMark": {
+                "_object": false,
+                "_timestamp": "2025-08-18T04:31:59.343Z",
+                "_type": "xsd:unsignedInt",
+                "_value": 0,
+                "_writable": true
+              },
+              "_object": true,
+              "_timestamp": "2025-08-18T04:31:59.303Z",
+              "_writable": true
+            },
+            "_object": true,
+            "_timestamp": "2025-08-18T04:31:59.303Z",
+            "_writable": true
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T04:31:59.303Z",
+          "_writable": true
+        },
+        "WANConnectionNumberOfEntries": {
+          "_object": false,
+          "_writable": false
+        },
+        "X_CT-COM_EponInterfaceConfig": {
+          "BiasCurrent": {
+            "_object": false,
+            "_writable": false
+          },
+          "RXPower": {
+            "_object": false,
+            "_timestamp": "2025-08-18T05:05:26.368Z",
+            "_type": "xsd:int",
+            "_value": 96,
+            "_writable": false
+          },
+          "Stats": {
+            "_object": true,
+            "_writable": false
+          },
+          "Status": {
+            "_object": false,
+            "_writable": false
+          },
+          "SupplyVottage": {
+            "_object": false,
+            "_writable": false
+          },
+          "TXPower": {
+            "_object": false,
+            "_writable": false
+          },
+          "TransceiverTemperature": {
+            "_object": false,
+            "_timestamp": "2025-08-18T05:05:26.368Z",
+            "_type": "xsd:int",
+            "_value": 12143,
+            "_writable": false
+          },
+          "_object": true,
+          "_timestamp": "2025-08-18T04:31:59.303Z",
+          "_writable": false
+        },
+        "X_CT-COM_WANIndex": {
+          "_object": false,
+          "_writable": false
+        },
+        "_object": true,
+        "_timestamp": "2025-08-18T04:31:59.303Z",
+        "_writable": false
+      },
+      "_object": true,
+      "_timestamp": "2025-08-18T05:05:26.360Z",
+      "_writable": false
+    },
+    "X_CT-COM_DNSSpeedLimit": {
+      "_object": true,
+      "_writable": true
+    },
+    "X_CT-COM_IPTraceRouteDiagnostics": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_IPoEDiagnostics": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_PPPOE_EMULATOR": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_ProxyDevice": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_Security": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_UplinkQoS": {
+      "_object": true,
+      "_writable": false
+    },
+    "X_CT-COM_UserInfo": {
+      "Limit": {
+        "_object": false,
+        "_writable": true
+      },
+      "Result": {
+        "_object": false,
+        "_writable": true
+      },
+      "RouteStatus": {
+        "_object": false,
+        "_writable": true
+      },
+      "ServiceName": {
+        "_object": false,
+        "_timestamp": "2025-08-18T04:31:59.309Z",
+        "_type": "xsd:string",
+        "_value": "",
+        "_writable": true
+      },
+      "ServiceNum": {
+        "_object": false,
+        "_writable": true
+      },
+      "Status": {
+        "_object": false,
+        "_writable": true
+      },
+      "Times": {
+        "_object": false,
+        "_writable": true
+      },
+      "UserId": {
+        "_object": false,
+        "_writable": true
+      },
+      "UserName": {
+        "_object": false,
+        "_timestamp": "2025-08-18T05:05:26.361Z",
+        "_type": "xsd:string",
+        "_value": "GGCL25574599",
+        "_writable": true
+      },
+      "_object": true,
+      "_timestamp": "2025-08-18T04:31:59.303Z",
+      "_writable": false
+    },
+    "_object": true,
+    "_timestamp": "2025-08-18T04:31:59.303Z"
+  },
+  "VirtualParameters": {
+    "IPTR069": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "192.168.3.12",
+      "_writable": false
+    },
+    "PonMac": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "",
+      "_writable": false
+    },
+    "RXPower": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:string",
+      "_value": "-20.17",
+      "_writable": false
+    },
+    "WlanPassword": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "",
+      "_writable": true
+    },
+    "_object": true,
+    "activedevices": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:int",
+      "_value": 1,
+      "_writable": false
+    },
+    "getSerialNumber": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "GGCL25574599",
+      "_writable": false
+    },
+    "getdeviceuptime": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:string",
+      "_value": "9d 08:39:22",
+      "_writable": false
+    },
+    "getponmode": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "EPON",
+      "_writable": false
+    },
+    "getpppuptime": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:string",
+      "_value": "5d 23:18:27",
+      "_writable": false
+    },
+    "gettemp": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:string",
+      "_value": "47",
+      "_writable": false
+    },
+    "pppoeIP": {
+      "_object": false,
+      "_timestamp": "2025-08-18T05:05:26.378Z",
+      "_type": "xsd:string",
+      "_value": "192.168.10.37",
+      "_writable": false
+    },
+    "pppoeMac": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "2C:33:41:57:45:99",
+      "_writable": false
+    },
+    "pppoePassword": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "",
+      "_writable": true
+    },
+    "pppoeUsername": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "santo",
+      "_writable": true
+    },
+    "pppoeUsername2": {
+      "_object": false,
+      "_timestamp": "2025-08-18T04:31:59.341Z",
+      "_type": "xsd:string",
+      "_value": "santo",
+      "_writable": false
+    }
+  },
+  "_deviceId": {
+    "_Manufacturer": "GGCL",
+    "_OUI": "2C3341",
+    "_ProductClass": "G663-XPON",
+    "_SerialNumber": "GGCL25574599"
+  },
+  "_lastInform": "2025-08-18T05:05:26.360Z",
+  "_registered": "2025-08-18T04:31:59.303Z"
+}

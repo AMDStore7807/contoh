@@ -1,22 +1,18 @@
-# TODO: Add User Endpoint in Express
+# TODO: Implement Local Storage for Device Data Pagination
 
 ## Tasks
 
-- [x] Add POST /api/users endpoint in server.js
-  - [x] Implement authentication middleware (authenticateToken)
-  - [x] Validate input: username and password required
-  - [x] Check if username already exists
-  - [x] Hash password using crypto (SHA-256 with salt) to match existing database format
-  - [x] Save new user to MongoDB 'users' collection with \_id, password, salt, roles (matching existing schema)
-  - [x] Return success response
-- [x] Update login verification to use crypto instead of bcrypt
-- [x] Update password update in PUT endpoint to use crypto
-- [ ] Test the endpoint (optional: run server and make a test request)
+- [x] Modify `src/pages/Devices.tsx` to add local storage caching for device data
+- [x] Extract data transformation logic into a reusable function
+- [x] Update `fetchDevices` to check cache before API calls and accumulate data
+- [x] Implement automatic cache expiration after 5 minutes
+- [x] Handle page size changes by invalidating cache when necessary
+- [x] Test the implementation to ensure load-more behavior works correctly
 
-## Notes
+## Details
 
-- Endpoint will be protected with JWT authentication
-- Password will be hashed using crypto.pbkdf2Sync with SHA-256 and salt to match existing user format
-- Ensure MongoDB connection is available
-- New users get default role "user"
-- Schema matches existing database: \_id, roles, password, salt
+- Use localStorage with key 'devicesCache'
+- Cache structure: { pageSize, allDevices, lastFetchedPage, timestamp }
+- Accumulate data across pages without refetching previous pages
+- Expire cache after 5 minutes (300000 ms)
+- On page size change, reset and fetch from scratch

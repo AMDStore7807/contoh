@@ -11,43 +11,48 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import api from "@/lib/api";
-
-interface LoginFormProps extends React.ComponentProps<"div"> {
-  onLoginSuccess: (token: string) => void;
-}
+import { useAuth } from "@/hooks/use-auth";
 
 export function LoginForm({
   className,
-  onLoginSuccess,
   ...props
-}: LoginFormProps) {
+}: React.ComponentProps<"div">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
     try {
-      // Panggil API login di port 7557
-      const response = await api.post("/login", {
-        username: username,
-        password: password,
+      // Panggil API login
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
       });
 
-      console.log("response", response);
+      if (response.ok) {
+        const data = await response.json();
+        const token = data.token;
 
-      // Ambil token dari respons
-      const token = response.data.token;
-
-      if (token) {
-        onLoginSuccess(token); // Kirim token ke App.tsx
-        navigate("/home"); // Redirect to home after login
+        if (token) {
+          login(token); // Use auth context
+          navigate("/dashboard"); // Redirect to dashboard after login
+        } else {
+          setError("Login gagal: Token tidak diterima.");
+        }
       } else {
-        setError("Login gagal: Token tidak diterima.");
+        const errorData = await response.json();
+        setError(errorData.message || "Login gagal!");
       }
     } catch (err) {
       console.error("Login gagal:", err);
@@ -59,17 +64,19 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="flex flex-col justify-center items-center">
-          <CardTitle className="font-bold text-2xl">
-            Login to your account
-          </CardTitle>
           <img
-            src="/vite.svg"
-            alt="Vite Logo"
-            width="20"
-            height="20"
+            src="/logo.png"
+            alt="Beatcom Logo"
+            width="200"
+            height="200"
             loading="lazy"
             className=""
           />
+          <CardTitle className="text-2xl text-center">
+            Login to your account{" "}
+            <span className="font-bold text-accent-foreground">GenieACS</span>
+          </CardTitle>
+
           <CardDescription>
             Enter your username below to login to your account
           </CardDescription>

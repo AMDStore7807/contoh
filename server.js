@@ -6,6 +6,7 @@ import { fileURLToPath } from "url";
 import jwt from "jsonwebtoken";
 import { MongoClient } from "mongodb";
 import crypto from "crypto";
+import fs from "fs";
 
 // Helper functions for password hashing
 function hashPassword(password, salt) {
@@ -18,7 +19,7 @@ function generateSalt() {
 
 // --- Setup Awal ---
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -96,7 +97,7 @@ app.post("/api/login", async (req, res) => {
 
     // Generate JWT token
     const token = jwt.sign(
-      { userId: user._id, username: user.username },
+      { userId: user._id, username: user._id, roles: user.roles },
       JWT_SECRET,
       { expiresIn: "24h" }
     );
@@ -116,7 +117,7 @@ app.post("/api/logout", authenticateToken, (req, res) => {
 });
 
 // POST /api/users - Add new user (protected)
-app.post("/api/users", async (req, res) => {
+app.post("/api/users", authenticateToken, async (req, res) => {
   const { username, password, roles } = req.body;
 
   if (!username || !password) {
@@ -230,19 +231,179 @@ app.delete("/api/users/:username", authenticateToken, async (req, res) => {
   }
 });
 
+// GET /api/permissions - List all permissions (protected)
+app.get("/api/permissions", authenticateToken, async (req, res) => {
+  console.log(`Request: ${req.method} ${req.path}`);
+  try {
+    if (!db) return res.status(503).json({ message: "Database belum siap" });
+
+    const permissionsCollection = db.collection("permissions");
+    const permissions = await permissionsCollection.find({}).toArray();
+
+    res.json(permissions);
+  } catch (error) {
+    console.error("Get permissions error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// POST /api/permissions - Add new permission (protected)
+app.post("/api/permissions", authenticateToken, async (req, res) => {
+  console.log(`Request: ${req.method} ${req.path}`);
+  const { role, resource, access, validate } = req.body;
+
+  if (!role || !resource || access === undefined) {
+    return res
+      .status(400)
+      .json({ message: "Role, resource, and access are required" });
+  }
+
+  try {
+    if (!db) return res.status(503).json({ message: "Database belum siap" });
+
+    const permissionsCollection = db.collection("permissions");
+
+    // Generate _id if not provided
+    const _id = req.body._id || `${role}:${resource}:${access}`;
+
+    // Check if permission already exists
+    const existingPermission = await permissionsCollection.findOne({ _id });
+    if (existingPermission) {
+      return res.status(409).json({ message: "Permission already exists" });
+    }
+
+    // Create new permission
+    const newPermission = {
+      _id,
+      role,
+      resource,
+      access,
+      validate: validate !== undefined ? validate : true,
+    };
+
+    await permissionsCollection.insertOne(newPermission);
+
+    console.log("Permission created successfully:", _id);
+    res.status(201).json({ message: "Permission created successfully" });
+  } catch (error) {
+    console.error("Create permission error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// PUT /api/permissions/:id - Update permission (protected)
+app.put("/api/permissions/:id", authenticateToken, async (req, res) => {
+  console.log(`Request: ${req.method} ${req.path}`);
+  const { id } = req.params;
+  const { role, resource, access, validate } = req.body;
+
+  try {
+    if (!db) return res.status(503).json({ message: "Database belum siap" });
+
+    const permissionsCollection = db.collection("permissions");
+    const updateData = {};
+
+    if (role !== undefined) updateData.role = role;
+    if (resource !== undefined) updateData.resource = resource;
+    if (access !== undefined) updateData.access = access;
+    if (validate !== undefined) updateData.validate = validate;
+
+    const result = await permissionsCollection.updateOne(
+      { _id: id },
+      { $set: updateData }
+    );
+
+    if (result.matchedCount === 0) {
+      return res.status(404).json({ message: "Permission not found" });
+    }
+
+    res.json({ message: "Permission updated successfully" });
+  } catch (error) {
+    console.error("Update permission error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// DELETE /api/permissions/:id - Delete permission (protected)
+app.delete("/api/permissions/:id", authenticateToken, async (req, res) => {
+  console.log(`Request: ${req.method} ${req.path}`);
+  const { id } = req.params;
+
+  try {
+    if (!db) return res.status(503).json({ message: "Database belum siap" });
+
+    const permissionsCollection = db.collection("permissions");
+    const result = await permissionsCollection.deleteOne({ _id: id });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ message: "Permission not found" });
+    }
+
+    res.json({ message: "Permission deleted successfully" });
+  } catch (error) {
+    console.error("Delete permission error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// POST /api/verify-token - Verify JWT token
+app.post("/api/verify-token", authenticateToken, (req, res) => {
+  res.json({ user: req.user });
+});
+
 // GET /api/welcome - Unprotected endpoint that logs request and returns welcome message
 app.get("/api/welcome", (req, res) => {
   console.log(`Request: ${req.method} ${req.path}`);
   res.json({ message: "Welcome to the API" });
 });
 
+// GET /api/config - Get configuration
+app.get("/api/config", authenticateToken, (req, res) => {
+  try {
+    const configPath = path.join(__dirname, "config.json");
+
+    // Check if config.json exists, if not create with default values
+    if (!fs.existsSync(configPath)) {
+      const defaultConfig = {
+        companyName: "BEATCOM",
+        appTitle: "GenieACS by Beatcom",
+        version: "1.0.0",
+      };
+      fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2));
+      console.log("Created default config.json");
+    }
+
+    const configData = fs.readFileSync(configPath, "utf8");
+    const config = JSON.parse(configData);
+    res.json(config);
+  } catch (error) {
+    console.error("Error reading config:", error);
+    res.status(500).json({ message: "Error reading configuration" });
+  }
+});
+
+// PUT /api/config - Update configuration (protected)
+app.put("/api/config", authenticateToken, (req, res) => {
+  try {
+    const configPath = path.join(__dirname, "config.json");
+    const newConfig = req.body;
+    fs.writeFileSync(configPath, JSON.stringify(newConfig, null, 2));
+    res.json({ message: "Configuration updated successfully" });
+  } catch (error) {
+    console.error("Error updating config:", error);
+    res.status(500).json({ message: "Error updating configuration" });
+  }
+});
+
 // --- 3. Atur Proxy API ke NBI (7557) ---
 // Proxy semua request yang tidak ditangani oleh routes di atas ke NBI
 // Hapus prefix /api saat proxy ke NBI
+// data 103.112.162.151
 app.use(
   "/api",
+  authenticateToken,
   createProxyMiddleware({
-    target: "http://localhost:7557", // Target backend NBI
+    target: "http://103.112.162.151:7557", // Target backend NBI
     changeOrigin: true,
     pathRewrite: {
       "^/api": "", // Hapus /api prefix

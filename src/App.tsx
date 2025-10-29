@@ -1,48 +1,62 @@
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "./pages/Login";
 import Home from "./pages/Home";
-import { useState } from "react";
+import DashboardPage from "./pages/Dashboard";
+import DevicesPage from "./pages/Devices";
+import SettingsPage from "./pages/Settings";
+import { AuthProvider } from "./providers/auth-provider";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
-  const [token, setToken] = useState<string | null>(
-    localStorage.getItem("token")
-  );
-
-  const onLoginSuccess = (newToken: string) => {
-    setToken(newToken);
-    localStorage.setItem("token", newToken);
-  };
-
-  console.log("token", token);
   return (
-    <div>
-      <nav>
-        {/* Link ke "/" sekarang akan otomatis ke /login.
-          Mungkin Bos mau ganti ini ke /home atau /login langsung.
-        */}
-        <Link to="/home">Home</Link> | <Link to="/about">About</Link> |{" "}
-        <Link to="/login">Login</Link>
-      </nav>
+    <AuthProvider>
+      <div>
+        <Routes>
+          {/* Redirect root to dashboard */}
+          <Route path="/" element={<Navigate to="/dashboard" />} />
 
-      <hr />
+          {/* Login route - public */}
+          <Route path="/login" element={<LoginPage />} />
 
-      <Routes>
-        {/* Redirect root to home */}
-        <Route path="/" element={<Navigate to="/home" />} />
+          {/* Protected routes */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/devices"
+            element={
+              <ProtectedRoute requiredResource="devices" requiredAccess={1}>
+                <DevicesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute requiredRole="admin">
+                <SettingsPage />
+              </ProtectedRoute>
+            }
+          />
 
-        {/* Login route */}
-        <Route
-          path="/login"
-          element={<LoginPage onLoginSuccess={onLoginSuccess} />}
-        />
-
-        {/* Home route - temporarily unprotected to test devices */}
-        <Route path="/home" element={<Home />} />
-
-        {/* Opsional: Rute "catch-all" untuk halaman tidak ditemukan */}
-        <Route path="*" element={<h2>404: Halaman Tidak Ditemukan</h2>} />
-      </Routes>
-    </div>
+          {/* Opsional: Rute "catch-all" untuk halaman tidak ditemukan */}
+          <Route path="*" element={<h2>404: Halaman Tidak Ditemukan</h2>} />
+        </Routes>
+      </div>
+    </AuthProvider>
   );
 }
 
