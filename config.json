@@ -1,3 +1,6 @@
 {
-  "companyName": "LINTAS JAYA NETWORK"
+  "companyName": "BEATCOM",
+  "cacheEnabled": false,
+  "cacheExpiryMinutes": 5,
+  "notificationsEnabled": true
 }

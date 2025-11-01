@@ -5,9 +5,17 @@ import { queryDevices } from "@/lib/api";
 import { LoadingDots } from "@/components/Loading";
 import { schema } from "@/components/data-table-constants";
 import { z } from "zod";
+import { useAuth } from "@/hooks/use-auth";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Clock, Settings } from "lucide-react";
 
 const CACHE_KEY = "devicesCache";
-const CACHE_EXPIRY_MS = 5 * 60 * 1000; // 5 minutes
+
+interface Config {
+  cacheEnabled: boolean;
+  cacheExpiryMinutes: number;
+}
 
 interface CacheData {
   pageSize: number;
@@ -67,12 +75,23 @@ function transformDeviceData(devices: RawDevice[]): z.infer<typeof schema>[] {
   });
 }
 
-function getCache(): CacheData | null {
+function getCache(config: Config): CacheData | null {
+  if (!config.cacheEnabled) {
+    // If cache is disabled, clear any existing cache
+    localStorage.removeItem(CACHE_KEY);
+    return null;
+  }
+
   try {
     const cached = localStorage.getItem(CACHE_KEY);
     if (!cached) return null;
     const data: CacheData = JSON.parse(cached);
-    if (Date.now() - data.timestamp > CACHE_EXPIRY_MS) {
+
+    const expiryMs =
+      config.cacheExpiryMinutes === 0
+        ? 0
+        : config.cacheExpiryMinutes * 60 * 1000;
+    if (expiryMs > 0 && Date.now() - data.timestamp > expiryMs) {
       localStorage.removeItem(CACHE_KEY);
       return null;
     }
@@ -145,6 +164,37 @@ export default function DevicesPage() {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
+  const [config, setConfig] = useState<Config>({
+    cacheEnabled: false,
+    cacheExpiryMinutes: 0,
+  });
+
+  const { token } = useAuth();
+
+  // Load config on mount
+  useEffect(() => {
+    const loadConfig = async () => {
+      try {
+        const response = await fetch("/api/config", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        if (response.ok) {
+          const configData = await response.json();
+          setConfig({
+            cacheEnabled: configData.cacheEnabled || false,
+            cacheExpiryMinutes: configData.cacheExpiryMinutes || 0,
+          });
+
+          // Cache expiry time is no longer needed
+        }
+      } catch (error) {
+        console.error("Error loading config:", error);
+      }
+    };
+    if (token) loadConfig();
+  }, [token]);
 
   const fetchDevices = async (
     currentPage = page,
@@ -152,8 +202,8 @@ export default function DevicesPage() {
   ) => {
     setLoading(true);
     try {
-      // Check cache first
-      const cache = getCache();
+      // Check cache first if enabled
+      const cache = getCache(config);
       let allDevices: z.infer<typeof schema>[] = [];
       let lastFetchedPage = 0;
 
@@ -187,14 +237,19 @@ export default function DevicesPage() {
           lastFetchedPage = pageToFetch;
         }
 
-        // Update cache with new data
-        const newCache: CacheData = {
-          pageSize: currentPageSize,
-          allDevices,
-          lastFetchedPage,
-          timestamp: Date.now(),
-        };
-        setCache(newCache);
+        // Update cache with new data if caching is enabled
+        if (config.cacheEnabled) {
+          const newCache: CacheData = {
+            pageSize: currentPageSize,
+            allDevices,
+            lastFetchedPage,
+            timestamp: Date.now(),
+          };
+          setCache(newCache);
+        } else {
+          // If caching is disabled, clear any existing cache
+          clearCache();
+        }
       } else {
         // Data already cached, just update total if needed
         if (allDevices.length > 0 && total === 0) {
@@ -227,9 +282,11 @@ export default function DevicesPage() {
   };
 
   useEffect(() => {
-    fetchDevices();
+    if (token) {
+      fetchDevices();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, pageSize]);
+  }, [page, pageSize, config, token]);
 
   if (loading) {
     return (
@@ -263,8 +320,33 @@ export default function DevicesPage() {
 
   return (
     <MainLayout>
-      <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-        <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min">
+      <div className="flex flex-1 flex-col gap-4 p-2">
+        {/* Cache Banner */}
+        {config.cacheEnabled && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5 text-blue-600" />
+              <div>
+                <p className="text-sm font-medium text-blue-900">
+                  Cache Device aktif, klik settings untuk data realtime
+                </p>
+                {config.cacheExpiryMinutes > 0 && (
+                  <p className="text-xs text-blue-700">
+                    Expires in: {config.cacheExpiryMinutes} minutes
+                  </p>
+                )}
+              </div>
+            </div>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/settings" className="flex items-center gap-2">
+                <Settings className="h-4 w-4" />
+                Settings
+              </Link>
+            </Button>
+          </div>
+        )}
+
+        <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min p-2">
           <DataTable
             data={data}
             total={total}
@@ -277,7 +359,7 @@ export default function DevicesPage() {
               // Clear cache when page size changes
               clearCache();
               setPageSize(newPageSize);
-              setPage(1); // Reset to first page when changing page size
+              setPage(1);
             }}
           />
         </div>

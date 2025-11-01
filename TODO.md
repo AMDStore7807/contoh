@@ -1,18 +1,18 @@
-# TODO: Implement Local Storage for Device Data Pagination
+# TODO: Merge Cache Settings into Main Settings Page
 
-## Tasks
+## Tasks to Complete
 
-- [x] Modify `src/pages/Devices.tsx` to add local storage caching for device data
-- [x] Extract data transformation logic into a reusable function
-- [x] Update `fetchDevices` to check cache before API calls and accumulate data
-- [x] Implement automatic cache expiration after 5 minutes
-- [x] Handle page size changes by invalidating cache when necessary
-- [x] Test the implementation to ensure load-more behavior works correctly
+- [x] Update `src/pages/Settings.tsx` to include cache settings (cacheEnabled and cacheExpiryMinutes) alongside companyName:
 
-## Details
+  - Add Switch component for cacheEnabled.
+  - Add Input component for cacheExpiryMinutes.
+  - Update state to include cacheEnabled and cacheExpiryMinutes.
+  - Adjust load/save logic to handle all config fields from /api/config.
 
-- Use localStorage with key 'devicesCache'
-- Cache structure: { pageSize, allDevices, lastFetchedPage, timestamp }
-- Accumulate data across pages without refetching previous pages
-- Expire cache after 5 minutes (300000 ms)
-- On page size change, reset and fetch from scratch
+- [x] Update `src/App.tsx` to remove the `/settings/cache` route and its import of CacheSettings.
+
+- [x] Delete `src/pages/settings/Cache.tsx` file.
+
+- [x] Test the merged settings page for functionality (load/save cache settings).
+
+- [x] Verify no broken navigation (ensure /settings still works and no links to /settings/cache).

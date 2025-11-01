@@ -366,8 +366,8 @@ app.get("/api/config", authenticateToken, (req, res) => {
     if (!fs.existsSync(configPath)) {
       const defaultConfig = {
         companyName: "BEATCOM",
-        appTitle: "GenieACS by Beatcom",
-        version: "1.0.0",
+        cacheEnabled: false,
+        cacheExpiryMinutes: 0,
       };
       fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2));
       console.log("Created default config.json");
@@ -392,6 +392,27 @@ app.put("/api/config", authenticateToken, (req, res) => {
   } catch (error) {
     console.error("Error updating config:", error);
     res.status(500).json({ message: "Error updating configuration" });
+  }
+});
+
+// DELETE /api/cache/clear - Clear device cache (protected)
+app.delete("/api/cache/clear", authenticateToken, (req, res) => {
+  try {
+    // Clear localStorage cache on the client side
+    // Since this is a server endpoint, we need to inform the client to clear localStorage
+    // The client-side code will handle the actual localStorage clearing
+    console.log(`Cache clear request from user: ${req.user.username}`);
+
+    // For server-side, we can also clear any server-side cache if needed
+    // For now, we'll just return success and let the client handle localStorage clearing
+
+    res.json({
+      message:
+        "Cache clear request acknowledged. Client will clear localStorage.",
+    });
+  } catch (error) {
+    console.error("Error clearing cache:", error);
+    res.status(500).json({ message: "Error clearing cache" });
   }
 });
 

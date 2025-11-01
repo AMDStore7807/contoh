@@ -4,8 +4,10 @@ import Home from "./pages/Home";
 import DashboardPage from "./pages/Dashboard";
 import DevicesPage from "./pages/Devices";
 import SettingsPage from "./pages/Settings";
+
 import { AuthProvider } from "./providers/auth-provider";
 import ProtectedRoute from "./components/ProtectedRoute";
+import NotFound from "./pages/404";
 
 function App() {
   return (
@@ -53,7 +55,7 @@ function App() {
           />
 
           {/* Opsional: Rute "catch-all" untuk halaman tidak ditemukan */}
-          <Route path="*" element={<h2>404: Halaman Tidak Ditemukan</h2>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </AuthProvider>

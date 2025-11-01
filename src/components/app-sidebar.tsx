@@ -20,6 +20,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { useAuth } from "@/hooks/use-auth";
+import { cn } from "@/lib/utils";
 
 // This is sample data.
 const data = {
@@ -103,18 +104,12 @@ const data = {
       title: "Pengaturan",
       url: "/settings",
       icon: Settings2,
-      items: [
-        {
-          title: "Nama Perusahaan",
-          url: "/settings",
-        },
-      ],
     },
   ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const [config, setConfig] = React.useState({ companyName: "BEATCOM" });
+  const [config, setConfig] = React.useState({ companyName: "" });
   const { hasAccess, token } = useAuth();
 
   // Load config from API on component mount
@@ -198,7 +193,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="flex flex-col items-center gap-2 px-4 py-2">
           <img src="/logo.png" alt="GenieACS Logo" className="w-full h-auto" />
           <span className="text-sm font-medium">GenieACS by Beatcom</span>
-          <span className="text-xl font-semibold">{config.companyName}</span>
+          <span
+            className={cn(
+              "text-xl font-semibold",
+              config.companyName ? "" : "h-7"
+            )}
+          >
+            {config.companyName}
+          </span>
         </div>
       </SidebarHeader>
       <SidebarContent>
